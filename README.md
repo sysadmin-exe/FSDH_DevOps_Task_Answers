@@ -14,7 +14,7 @@ The CI/CD Pipeline will be created and managed with **Azure DevOps.**
 - Each deployment starting from Dev will have to go through all necessary check and approval has to be given for the next deployment to proceed on the pipeline till production is reached. 
 - Build will be automatic so that once code changes are commited, the pipeline does the needed deployment work.
 
-![](https://terraformlearn0702.blob.core.windows.net/files/pipelines.png)
+![Alt Text](https://terraformlearn0702.blob.core.windows.net/files/Azure_DevOps_Pipeline.png)
 
 ## IaC Tool of choice
 **Terraform.** With the use of modules, we can deploy same enviroment in different regions easily.
