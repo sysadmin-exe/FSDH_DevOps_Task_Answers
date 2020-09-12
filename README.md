@@ -5,7 +5,7 @@ This is a Repo that contains the answers to the DevOps task from FSDH
 
 ![Alt Text](https://terraformlearn0702.blob.core.windows.net/files/serverless_architecture.png) 
 
-This Diagram contains 2 regions for HA accessible via traffic manager. Azure functions has been used for the API (middle tier) to give us the Serverless set up. Cient app will be on Azure web app. These app resources will be deployed in an app service plan. Azure SQL and Cosmos NoSQL will bw used as they provide redundancy and is highly available so one set up is enough to meet the needs of the 2 regions. 
+This Diagram contains 2 regions for HA accessible via traffic manager. Azure Function App has been used for the API (middle tier) to give us the Serverless set up. Cient/Mobile app will be on Azure web app. These app resources will be deployed in an app service plan. Azure SQL and Cosmos NoSQL will be used as they have cross regional replication features and is highly available so one set up is enough to meet the needs of the 2 regions. 
 
 ## CI/CD Strategy
 The CI/CD Pipeline will be created and managed with **Azure DevOps.** 
@@ -20,11 +20,11 @@ The CI/CD Pipeline will be created and managed with **Azure DevOps.**
 **Terraform.** With the use of modules, we can deploy same enviroment in different regions easily.
 
 ## Go-Live Plan
-- Get all stakeholders on board. From developers to testers to project managers and product team. This can be a meeting in a triage from. We then create a Go live plan together as I dont think one person or one group can create a go line plan. 
+- Get all stakeholders on board. From developers, to testers, to project managers and product team. This can be a meeting in a triage from. We then create a Go live plan together as I dont think one person or one group can create a go live plan. 
 - Have some user testing like Beta testing where we have selected users (not developers) check out the app to let us know what they think and if they had any issues.
 - Security tests to make sure the application can withstand web application attacks.
-- Test dependencie - Unit testing. This will help us know how each tier or resource in this application combines together to give a product. Test to know what kind of issues can occur should one part of the application go down and how long it can take to recover. 
-- Ensure that prior to go live, the application is using the updated version of any resource. Since this application uses a lot of PaaS resources, we might not have to bother but this should still be noted.
+- Test dependencies - Unit testing. This will help us know how each tier or resource in this application combines together to give a product. Test to know what kind of issues can occur should one part of the application go down and how long it can take to recover. 
+- Ensure that prior to go live, the application is using the updated version of any resource. Since this application uses mostly PaaS resources, we might not have to bother but this should still be noted.
 - Check for SSL certificate status and expiration date.
 - Make sure domain name is still intact. We dont want to be having issues with domain few days after go live.
 - Do a test go live. This can be simulated or the real deal but without letting anyone outside the development team knowing like press.
@@ -35,4 +35,3 @@ The CI/CD Pipeline will be created and managed with **Azure DevOps.**
 ## Monitoring
 Azure Log Analytics & Application Insights: This will be used to check metrics like Requests per second on API and web app, Capacity, Failed requests, Performance, health status of resources. 
 Alerts will also be set up to trigger emails to development team in the case of unexpected behaviour.
-
