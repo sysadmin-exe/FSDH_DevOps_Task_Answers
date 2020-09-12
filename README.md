@@ -3,7 +3,7 @@ This is a Repo that contains the answers to the DevOps task from FSDH
 
 ## Diagram showing architecture
 
-![](https://drive.google.com/file/d/1wBiBFSjHbcP84DIafMzt31kcKNcOozgA/view?usp=sharing)
+![](https://terraformlearn0702.file.core.windows.net/cli/serverless_architecture.png)
 
 This Diagram contains 2 regions for HA accessible via traffic manager. Azure functions has been used for the API (middle tier) to give us the Serverless set up. Cient app will be on Azure web app. These app resources will be deployed in an app service plan. Azure SQL and Cosmos NoSQL will bw used as they provide redundancy and is highly available so one set up is enough to meet the needs of the 2 regions. 
 
@@ -14,7 +14,7 @@ The CI/CD Pipeline will be created and managed with **Azure DevOps.**
 - Each deployment starting from Dev will have to go through all necessary check and approval has to be given for the next deployment to proceed on the pipeline till production is reached. 
 - Build will be automatic so that once code changes are commited, the pipeline does the needed deployment work.
 
-![](https://drive.google.com/file/d/1dUdnlQT6Djjo-5hMiGvdsPl-_SmYdYuA/view?usp=sharing)
+![](https://terraformlearn0702.file.core.windows.net/cli/pipelines.png)
 
 ## IaC Tool of choice
 **Terraform.** With the use of modules, we can deploy same enviroment in different regions easily.
