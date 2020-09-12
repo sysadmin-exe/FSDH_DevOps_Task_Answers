@@ -3,7 +3,7 @@ This is a Repo that contains the answers to the DevOps task from FSDH
 
 ## Diagram showing architecture
 
-![](https://terraformlearn0702.file.core.windows.net/cli/serverless_architecture.png)
+![Alt Text](https://drive.google.com/file/d/1wBiBFSjHbcP84DIafMzt31kcKNcOozgA/view?usp=sharing) 
 
 This Diagram contains 2 regions for HA accessible via traffic manager. Azure functions has been used for the API (middle tier) to give us the Serverless set up. Cient app will be on Azure web app. These app resources will be deployed in an app service plan. Azure SQL and Cosmos NoSQL will bw used as they provide redundancy and is highly available so one set up is enough to meet the needs of the 2 regions. 
 
